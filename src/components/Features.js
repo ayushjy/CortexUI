@@ -1,6 +1,23 @@
 import React from 'react'
 
 const Features = () => {
+    const data=[
+        {
+            image:"/img/lightweight.png",
+            heading:"Light Weight",
+            feature:"Motion Art for Elementor is designed to be lightweight."
+        },
+        {
+            image:"/img/like.png",
+            heading:"100% Responsive",
+            feature:"Create a consistent visual experience across all devices."
+        },
+        {
+            image:"/img/interface.png",
+            heading:"User Friendly Interface",
+            feature:"Ensure a smooth experience for both applicants and administrators."
+        }
+    ]
   return (
     <div className='mt-36'>
         <div className='flex flex-col items-center gap-4'>
@@ -8,27 +25,16 @@ const Features = () => {
         <div className='font-normal text-gray-400 flex justify-center w-1/2 text-center text-lg'>Whether you're a seasoned web designer or just starting out, Motion Art for Elementor seamlessly integrates with the Elementor platform, providing you with a seamless and intuitive experience.</div>
         </div>
         <div className='mt-24 flex gap-6'>
-            <div className='w-1/3 h-full px-6 py-10 bg-[linear-gradient(90deg,#F87516_0%,#5E11FF_100%)] rounded-3xl'>
-                <div className='-mx-8 -mt-8 mb-6'><img src="/img/lightweight.png" alt="lightweight"/></div>
-                <div className='flex flex-col gap-4 items-start'>
-                    <div className='text-2xl font-medium text-gray-100 sora'>Light Weight</div>
-                    <div className='font-normal text-gray-400 text-lg sora'>Motion Art for Elementor is designed to be lightweight.</div>
+            {data.map((item,index)=>(
+                    <div key={index} className='w-1/3 h-full px-6 py-10 bg-[linear-gradient(90deg,#F87516_0%,#5E11FF_100%)] rounded-3xl'>
+                    <div className='-mx-8 -mt-8 mb-6'><img src={item.image}/></div>
+                    <div className='flex flex-col gap-4 items-start'>
+                        <div className='text-2xl font-medium text-gray-100 sora'>{item.heading}</div>
+                        <div className='font-normal text-gray-400 text-lg sora'>{item.feature}</div>
+                    </div>
                 </div>
-            </div>
-            <div className='w-1/3 h-full px-6 py-10 bg-[linear-gradient(90deg,#F87516_0%,#5E11FF_100%)] rounded-3xl'>
-                <div className='-mx-8 -mt-8 mb-6'><img src="/img/like.png" alt="like"/></div>
-                <div className='flex flex-col gap-4 items-start'>
-                    <div className='text-2xl font-medium text-gray-100 sora'>100% Responsive</div>
-                    <div className='font-normal text-gray-400 text-lg  sora'>Create a consistent visual experience across all devices..</div>
-                </div>
-            </div>
-            <div className='w-1/3 h-full px-6 py-10 bg-[linear-gradient(90deg,#F87516_0%,#5E11FF_100%)] rounded-3xl'>
-                <div className='-mx-8 -mt-8 mb-6'><img src="/img/interface.png" alt="interface"/></div>
-                <div className='flex flex-col gap-4 items-start'>
-                    <div className='text-2xl font-medium text-gray-100 sora'>User Friendly Interface</div>
-                    <div className='font-normal text-gray-400 text-lg  sora'>Ensure a smooth experience for both applicants and administrators.</div>
-                </div>
-            </div>
+            ))}
+            
         </div>
     </div>
   )
