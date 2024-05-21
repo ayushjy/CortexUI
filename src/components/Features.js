@@ -25,16 +25,8 @@ const Features = () => {
         <div className='font-normal text-gray-400 flex justify-center w-1/2 text-center text-lg'>Whether you're a seasoned web designer or just starting out, Motion Art for Elementor seamlessly integrates with the Elementor platform, providing you with a seamless and intuitive experience.</div>
         </div>
         <div className='mt-24 flex gap-6'>
-            {data.map((item,index)=>(
-                    <div key={index} className='w-1/3 h-full px-6 py-10 bg-[linear-gradient(90deg,#F87516_0%,#5E11FF_100%)] rounded-3xl'>
-                    <div className='-mx-8 -mt-8 mb-6'><img src={item.image}/></div>
-                    <div className='flex flex-col gap-4 items-start'>
-                        <div className='text-2xl font-medium text-gray-100 sora'>{item.heading}</div>
-                        <div className='font-normal text-gray-400 text-lg sora'>{item.feature}</div>
-                    </div>
-                </div>
-            ))}
-            
+          
+          
         </div>
     </div>
   )
