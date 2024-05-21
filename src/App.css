@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+.yaha{
+  background-color:linear-gradient(90deg, #F87516 0%, #5E11FF 100%);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -36,3 +40,5 @@
     transform: rotate(360deg);
   }
 }
+
+
