@@ -21,7 +21,7 @@ const Rating = () => {
    return (
       <div className='flex flex-col mt-28'>
          <div className='text-2xl font-normal text-gray-100 outfit text-center'>Trusted by thousands of users around the world</div>
-         <div className='flex justify-between items-center mt-16'>
+         <div className='h-full flex justify-between items-center mt-16 max-lg:px-8 max-lg:gap-32 max-lg:justify-center max-lg:flex-wrap'>
             {data.map((item, index) => (
                <div key={index} className='flex gap-3 items-end'>
                   <img src={item.image1} />

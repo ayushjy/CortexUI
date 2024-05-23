@@ -11,7 +11,7 @@ import Footer from './components/Footer'
 const App = () => {
   return (
     <div className='h-full bg-[#0e0e1b]'>
-    <div className='px-36'>
+    <div className='px-36 max-lg:px-6'>
       <Header/>
       <LandingPage/>
       <Rating/>
